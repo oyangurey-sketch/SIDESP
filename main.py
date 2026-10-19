@@ -47,6 +47,7 @@ def iniciar_sesion():
     if trabajador is not None:
         print(f"\nBienvenido(a), {trabajador['nombre']}")
         print(f"Cargo: {trabajador['cargo']}")
+        gestionar_roles(trabajador)
         return trabajador
     else:
         print("\nError: ID o contraseña incorrectos.")
@@ -61,5 +62,21 @@ print("Estructura inicial cargada correctamente.")
 # ==========================================
 # EJECUCIÓN DEL INICIO DE SESIÓN
 # ==========================================
+
+
+# ==========================================
+# MÓDULO 2: GESTIÓN DE ROLES Y PERMISOS
+# ==========================================
+
+# Función para identificar el menú según el cargo
+def gestionar_roles(trabajador):
+    cargo = trabajador["cargo"]
+
+    if cargo == "Administrador":
+        print("\nAcceso autorizado: Administrador")
+    elif cargo == "Asistente":
+        print("\nAcceso autorizado: Asistente")
+    else:
+        print("\nError: Cargo no reconocido.")
 
 iniciar_sesion()
