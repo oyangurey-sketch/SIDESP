@@ -80,3 +80,5 @@ def gestionar_roles(trabajador):
         print("\nError: Cargo no reconocido.")
 
 iniciar_sesion()
+
+print("bit")
