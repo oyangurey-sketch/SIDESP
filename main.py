@@ -114,3 +114,17 @@ def menu_asistente():
             break
         else:
             print("\nOpción inválida. Intente nuevamente.")
+# Función para gestionar los roles
+def gestionar_roles(trabajador):
+    cargo = trabajador["cargo"]
+
+    if cargo == "Administrador":
+        print("\nAcceso autorizado: Administrador")
+        menu_administrador()  
+    elif cargo == "Asistente":
+        print("\nAcceso autorizado: Asistente")
+        menu_asistente()    
+    else:
+        print("\nError: Cargo no reconocido.")
+
+iniciar_sesion()
